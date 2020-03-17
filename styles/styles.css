@@ -1,0 +1,76 @@
+@import url("https://use.typekit.net/mvg7qnq.css");
+
+:root {
+  --grid: 40px;
+  --backgroundColor: rgba(255, 255, 255, 1);
+  --textColor: rgb(22, 22, 29);
+  --secondaryColor: rgba(33, 33, 33, 0.6);
+  --tertiaryColor: rgba(33, 33, 33, 0.1);
+}
+
+body {
+  width: 100vw;
+  background-color: var(--backgroundColor);
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-size: var(--grid) var(--grid);
+  background-image: linear-gradient(
+      to right,
+      var(--tertiaryColor) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--tertiaryColor) 1px, transparent 1px);
+}
+
+.wrapper {
+  padding: var(--grid);
+  box-sizing: border-box;
+  margin-top: calc(var(--grid) * 4);
+}
+
+h1 {
+  width: 80%;
+  margin: 0;
+  font-size: calc(var(--grid) * 2);
+  margin-top: calc(var(--grid) / 3.3);
+  line-height: 1;
+  color: var(--textColor);
+  font-family: ff-meta-serif-web-pro, serif;
+  font-weight: 600;
+  font-style: normal;
+  display: inline-block;
+  min-height: calc(var(--grid) * 4);
+}
+
+h2 {
+  width: 80%;
+  margin: 0;
+  margin-top: calc(var(--grid) * 2);
+  line-height: 1.7;
+  color: var(--textColor);
+  font-family: ff-meta-serif-web-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  margin: 0;
+  line-height: 2.15;
+  color: var(--textColor);
+  font-family: ff-meta-serif-web-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: var(--secondaryColor);
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: calc(var(--grid) * 4.05);
+}
