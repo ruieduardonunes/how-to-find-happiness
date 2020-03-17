@@ -74,3 +74,57 @@ a {
   justify-content: space-between;
   margin-top: calc(var(--grid) * 4.05);
 }
+
+.button {
+  width: var(--grid);
+  height: var(--grid);
+  vertical-align: middle;
+  text-align: center;
+  margin-left: var(--grid);
+  margin-top: var(--grid);
+  background-color: black;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.button .feather {
+  margin-top: 8px;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --grid: 20px;
+  }
+
+  h1 {
+    width: 100%;
+    line-height: calc(var(--grid) * 3);
+    margin-top: calc(var(--grid) * -1.14);
+  }
+
+  h2 {
+    margin-top: calc(var(--grid) * 1.79);
+    font-size: var(--grid);
+    line-height: calc(var(--grid) * 2);
+  }
+
+  h3 {
+    line-height: calc(var(--grid) * 2);
+    font-size: calc(var(--grid) * 0.8);
+  }
+
+  .button {
+    width: calc(var(--grid) * 2);
+    height: calc(var(--grid) * 2);
+  }
+
+  .detail {
+    margin-bottom: calc(var(--grid) * 3);
+  }
+}

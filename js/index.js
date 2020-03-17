@@ -1,3 +1,5 @@
+var loadedData;
+
 fetch(
   "https://api.are.na/v2/channels/how-to-find-happiness-during-the-collapse-of-civilization"
 )
@@ -11,22 +13,24 @@ fetch(
 
     // Examine the text in the response
     response.json().then(function(data) {
-      updateContent(data);
+      loadedData = data;
+      updateContent();
     });
   })
   .catch(function(err) {
     console.log("Fetch Error :-S", err);
   });
 
-function updateContent(data) {
+function updateContent() {
   var happy = document.getElementById("happy");
-  const totalBlocks = data.contents.length - 1;
+  const totalBlocks = loadedData.contents.length - 1;
 
   var random = Math.floor(Math.random() * totalBlocks);
 
-  const content = data.contents[random].content;
+  const content = loadedData.contents[random].content;
   happy.innerHTML = content;
 
   textBalancer.initialize(".headline");
-  textBalancer.balanceText();
+
+  feather.replace();
 }
