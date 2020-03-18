@@ -108,7 +108,6 @@ a {
 .button::after {
   content: "Shuffle";
   color: var(--accentColor);
-  font-weight: bold;
   display: inline-block;
   margin-left: var(--grid);
   height: var(--grid);
@@ -151,11 +150,11 @@ a {
   h1 {
     width: 100%;
     line-height: calc(var(--grid) * 3);
-    margin-top: calc(var(--grid) * -1.14);
+    margin-top: calc(var(--grid) * -1.2);
   }
 
   h2 {
-    margin-top: calc(var(--grid) * 1.79);
+    margin-top: calc(var(--grid) * 1.85);
     font-size: var(--grid);
     line-height: calc(var(--grid) * 2);
   }
@@ -170,7 +169,12 @@ a {
     height: calc(var(--grid) * 2);
   }
 
+  .button::after {
+    margin-left: calc(var(--grid) * 2);
+  }
+
   .detail {
+    margin-top: calc(var(--grid) * 4.1);
     margin-bottom: calc(var(--grid) * 3);
   }
 }
