@@ -30,8 +30,9 @@ function updateContent() {
   const content = loadedData.contents[random].content;
 
   lastCharacter = content.charAt(content.length - 1);
+  beforeLast = content.charAt(content.length - 2);
 
-  if (lastCharacter === "." || lastCharacter === ". ") {
+  if (lastCharacter === "." || beforeLast === ".") {
     happy.innerHTML = content;
   } else {
     happy.innerHTML = content + ".";
@@ -39,3 +40,7 @@ function updateContent() {
 
   textBalancer.initialize(".headline, .subHead");
 }
+
+console.log(
+  "Hi there! This small website was made in Europe 🇪🇺. Find it on github: https://github.com/ruieduardonunes/how-to-find-happiness"
+);

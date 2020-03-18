@@ -72,6 +72,10 @@ a {
   color: var(--accentColor);
 }
 
+#happy::first-letter {
+  text-transform: capitalize;
+}
+
 .detail {
   display: flex;
   flex-direction: row;
@@ -114,7 +118,7 @@ a {
   font-family: ff-meta-serif-web-pro, serif;
   font-weight: 600;
   font-style: normal;
-  padding-left: 4px;
+  padding-left: 8px;
   margin-top: calc(var(--grid) * 0.23);
   animation-name: fadeIn;
   animation-duration: 10s;
