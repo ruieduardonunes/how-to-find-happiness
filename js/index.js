@@ -1,7 +1,7 @@
 var loadedData;
 
 fetch(
-  "https://api.are.na/v2/channels/how-to-find-happiness-during-the-collapse-of-civilization"
+  "https://api.are.na/v2/channels/how-to-find-happiness-during-the-collapse-of-civilization/?per=1000"
 )
   .then(function(response) {
     if (response.status !== 200) {
@@ -14,7 +14,6 @@ fetch(
     // Examine the text in the response
     response.json().then(function(data) {
       loadedData = data;
-      console.log(loadedData);
       updateContent();
     });
   })
