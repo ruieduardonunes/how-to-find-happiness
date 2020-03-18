@@ -127,6 +127,25 @@ a {
   z-index: -1;
 }
 
+.madeIn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* .logo {
+  width: calc(var(--grid) * 2);
+  height: calc(var(--grid) * 2);
+  background-image: url(../img/icon.svg);
+  background-size: cover;
+  overflow: visible;
+  margin-top: -50px;
+}
+
+.madeIn h3 {
+  transform: translateX(calc(var(--grid) * -1));
+} */
+
 @keyframes fadeIn {
   40% {
     transform: translateY(calc(var(--grid) * 0.37));
@@ -177,4 +196,8 @@ a {
     margin-top: calc(var(--grid) * 4.1);
     margin-bottom: calc(var(--grid) * 3);
   }
+  /* 
+  .logo {
+    margin-top: -14px;
+  } */
 }

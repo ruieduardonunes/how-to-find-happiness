@@ -31,7 +31,7 @@ function updateContent() {
 
   lastCharacter = content.charAt(content.length - 1);
 
-  if (lastCharacter === ".") {
+  if (lastCharacter === "." || lastCharacter === ". ") {
     happy.innerHTML = content;
   } else {
     happy.innerHTML = content + ".";
