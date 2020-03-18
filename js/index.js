@@ -14,6 +14,7 @@ fetch(
     // Examine the text in the response
     response.json().then(function(data) {
       loadedData = data;
+      console.log(loadedData);
       updateContent();
     });
   })
@@ -23,14 +24,19 @@ fetch(
 
 function updateContent() {
   var happy = document.getElementById("happy");
-  const totalBlocks = loadedData.contents.length - 1;
+  const totalBlocks = loadedData.contents.length;
 
   var random = Math.floor(Math.random() * totalBlocks);
 
   const content = loadedData.contents[random].content;
-  happy.innerHTML = content;
 
-  textBalancer.initialize(".headline");
+  lastCharacter = content.charAt(content.length - 1);
 
-  feather.replace();
+  if (lastCharacter === ".") {
+    happy.innerHTML = content;
+  } else {
+    happy.innerHTML = content + ".";
+  }
+
+  textBalancer.initialize(".headline, .subHead");
 }
