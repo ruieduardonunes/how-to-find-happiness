@@ -23,6 +23,7 @@ fetch(
 
 function updateContent() {
   var happy = document.getElementById("happy");
+  var light = document.getElementById("light");
   const totalBlocks = loadedData.contents.length;
 
   var random = Math.floor(Math.random() * totalBlocks);
@@ -31,6 +32,8 @@ function updateContent() {
 
   lastCharacter = content.charAt(content.length - 1);
   beforeLast = content.charAt(content.length - 2);
+
+  light.style.visibility = "hidden";
 
   if (lastCharacter === "." || beforeLast === ".") {
     happy.innerHTML = content;
