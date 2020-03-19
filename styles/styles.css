@@ -5,8 +5,18 @@
   --backgroundColor: rgba(255, 255, 255, 1);
   --textColor: rgb(22, 22, 29);
   --secondaryColor: rgba(33, 33, 33, 0.6);
-  --accentColor: rgb(1, 116, 209);
+  --accentColor: rgb(17, 66, 222);
   --tertiaryColor: rgba(33, 33, 33, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: rgba(0, 0, 0, 1);
+    --textColor: rgba(255, 255, 255, 0.8);
+    --secondaryColor: rgba(255, 255, 255, 0.6);
+    --accentColor: rgb(230, 154, 167);
+    --tertiaryColor: rgba(255, 255, 255, 0.1);
+  }
 }
 
 ::selection {
@@ -48,6 +58,10 @@ h1 {
   min-height: calc(var(--grid) * 5);
 }
 
+h1::first-letter {
+  text-transform: capitalize;
+}
+
 h2 {
   width: 80%;
   margin: 0;
@@ -70,10 +84,6 @@ h3 {
 
 a {
   color: var(--accentColor);
-}
-
-#happy::first-letter {
-  text-transform: capitalize;
 }
 
 .detail {
