@@ -91,7 +91,7 @@ a {
   text-align: center;
   margin-left: var(--grid);
   margin-top: var(--grid);
-  background-color: black;
+  background-color: var(--accentColor);
   cursor: pointer;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -101,12 +101,13 @@ a {
   user-select: none;
   background-image: url(../img/refresh.svg);
   background-size: contain;
-  transition: opacity 400ms ease;
+  transition: opacity, border-radius 400ms ease;
   z-index: 1;
+  border-radius: 20px;
 }
 
 .button:hover {
-  opacity: 0.8;
+  border-radius: 10px;
 }
 
 .button::after {
